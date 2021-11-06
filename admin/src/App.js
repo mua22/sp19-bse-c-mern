@@ -6,9 +6,9 @@ function App() {
   return (
     <div className="App">
       <h1>Hello C Section</h1>
-      <Counter />
-      <Counter />
-      <Counter />
+      <Counter theme="yellow" country="pakistan" />
+      <Counter theme="blue" />
+      <Counter theme="aqua" />
     </div>
   );
 }
