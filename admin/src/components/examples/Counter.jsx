@@ -1,4 +1,6 @@
+import { Button } from "@mui/material";
 import React from "react";
+import AccessTimeFilledIcon from "@mui/icons-material/AccessTimeFilled";
 const Counter = (props) => {
   console.log(props);
   //   let count = 5;
@@ -19,9 +21,13 @@ const Counter = (props) => {
   };
   return (
     <div style={myStyles}>
-      <h5>Counter Component</h5>
-      <button onClick={countDown}>-</button> {count}{" "}
-      <button onClick={countUp}> +</button>
+      <h5>
+        <AccessTimeFilledIcon /> Counter Component{" "}
+      </h5>
+      <Button variant="contained" onClick={countDown}>
+        -
+      </Button>{" "}
+      {count} <button onClick={countUp}> +</button>
       <br />
       Current Counter Value is {count} <br />
       {count < 0 && <span>Count is less than 0</span>}
