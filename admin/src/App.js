@@ -1,15 +1,19 @@
 import React from "react";
 
 import logo from "./logo.svg";
-import "./App.css";
+
 import Counter from "./components/examples/Counter";
+import SortTest from "./components/examples/SortTest";
+import Products from "./components/products/Products";
 
 function App() {
   const [theme, setTheme] = React.useState("blue");
   return (
     <div className="App">
       <h1>Hello C Section</h1>
-      <div>
+      <Products />
+      {/* <SortTest /> */}
+      {/* <div>
         Current Theme is {theme}
         <br />
         <input
@@ -32,7 +36,7 @@ function App() {
       </div>
       <Counter theme={theme} country="pakistan" />
       <Counter theme={theme} />
-      <Counter theme={theme} />
+      <Counter theme={theme} /> */}
     </div>
   );
 }
