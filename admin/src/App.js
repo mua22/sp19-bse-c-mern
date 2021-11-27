@@ -9,7 +9,9 @@ import { Link, BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./components/views/auth/Login";
 import Register from "./components/views/auth/Register";
 import ProductDetails from "./components/products/ProductDetails";
-
+import ProductForm from "./components/products/ProductForm";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function App() {
   const [theme, setTheme] = React.useState("blue");
   return (
@@ -32,10 +34,13 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/products/create" element={<ProductForm />} />
+          <Route path="/products/edit/:id" element={<ProductForm />} />
           <Route path="/products/details/:id" element={<ProductDetails />} />
           <Route path="/" element={<Products />} />
         </Routes>
       </BrowserRouter>
+      <ToastContainer />
     </div>
   );
 }
