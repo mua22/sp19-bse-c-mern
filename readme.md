@@ -1,9 +1,11 @@
-#Express React App
+# Express React App
 
 ## Download then run following commands for
 
-###server
+### server
 
 > npm i
+
 > npm i -g nodemon
+
 > nodemon ./bin/www
